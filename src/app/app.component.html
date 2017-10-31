@@ -1,0 +1,19 @@
+<table *ngIf="datos.length > 0">
+	<tr>
+		<td>Id</td>
+		<td>Descripción</td>
+		<td>Precio</td>
+		<td>Cantidad</td>
+		<td>Importe</td>
+	</tr>
+	<tr *ngFor="let elemento of datos;">
+		<td>{{elemento.id}}</td>
+		<td>{{elemento.descripcion}}</td>
+		<td>{{elemento.precio}}</td>
+		<td>{{elemento.cantidad}}</td>
+		<td>{{elemento.importe}}</td>
+	</tr>
+</table>
+<div *ngIf="datos.length === 0">
+	No hay elementos.
+</div>
